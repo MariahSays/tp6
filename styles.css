@@ -108,11 +108,12 @@ h4:hover{
   color: white;
 } 
 
-p.sub {
+li.sub {
   margin-top: 0;
   margin-bottom: 0;
   font-style: italic;
   font-family: 'Playfair Display', serif;
+  list-style: none;
 }
 
 ul, ol {

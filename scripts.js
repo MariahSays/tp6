@@ -36,7 +36,6 @@ document.querySelector("#header h1").onclick = function() {
 
 document.querySelector("#ingredients h4").onclick = function() {
    document.querySelector("#ingredients ul").style.display = "block";
-   document.querySelector("#ingredients p").style.display = "block";
  } //displays ingredients 
 
  document.querySelector("#equipment h4").onclick = function() {
@@ -45,7 +44,6 @@ document.querySelector("#ingredients h4").onclick = function() {
  
  document.querySelector("#directions h4").onclick = function() {
    document.querySelector("#directions ol").style.display = "block";
-   document.querySelector("#directions p").style.display = "block";
  } //displays directions
  
 loadFileInto("ingredients.html  ", "#ingredients ul");
