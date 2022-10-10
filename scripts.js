@@ -10,7 +10,7 @@ function loadFileInto(fromFile, whereTo) {
 	// provides code to do something in response to the AJAX request
 	ajax.onreadystatechange = function() {
 			if ((this.readyState == 4) && (this.status == 200)) {
-				document.querySelector(whereTo).innerHTML = this.responseText;
+				document.querySelector(whereTo).innerHTML += this.responseText;
 				
 			} else if ((this.readyState == 4) && (this.status != 200)) {
 				console.log("Error: " + this.responseText);
@@ -28,8 +28,6 @@ function loadFileInto(fromFile, whereTo) {
 
 window.onload = function(){
   
-loadFileInto("ingredients.html", "#ingredients");
-
 document.querySelector("#header h1").classList.add("makeBig"); //changes title on page  ``
   
 document.querySelector("#header h1").onclick = function() {
@@ -38,7 +36,7 @@ document.querySelector("#header h1").onclick = function() {
 
 document.querySelector("#ingredients h4").onclick = function() {
    document.querySelector("#ingredients ul").style.display = "block";
-  document.querySelector("#ingredients p").style.display = "block";
+   document.querySelector("#ingredients p").style.display = "block";
  } //displays ingredients 
 
  document.querySelector("#equipment h4").onclick = function() {
@@ -47,10 +45,16 @@ document.querySelector("#ingredients h4").onclick = function() {
  
  document.querySelector("#directions h4").onclick = function() {
    document.querySelector("#directions ol").style.display = "block";
-  document.querySelector("#directions p").style.display = "block";
+   document.querySelector("#directions p").style.display = "block";
  } //displays directions
  
- document.querySelector("#ingredients ul").innerHTML +="<li>Love!</li>";
+loadFileInto("ingredients.html  ", "#ingredients ul");
+loadFileInto("equipment.html", "#equipment ul");
+loadFileInto("directions.html", "#directions ol"); 
+
+setTimeout(function() {
+document.querySelector("#ingredients ul").innerHTML +="<li>Love!</li>";
+}, 100);
 }
 
 

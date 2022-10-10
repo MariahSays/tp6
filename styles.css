@@ -82,8 +82,8 @@ h1 {
 #gridContainer #directions p{
   display: none;
 }
-
-/* class demo code 
+/*
+ class demo code 
 #gridContainer #ingredients  .show ul,
 #gridContainer #ingredients .show p,
 #gridContainer #equipment  .show ul,
@@ -92,6 +92,10 @@ h1 {
   display: block;
 }
 */
+
+.show{
+  display: block;
+}
 
 h4 {
   text-align: center;
